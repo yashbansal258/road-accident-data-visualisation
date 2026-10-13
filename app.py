@@ -2,16 +2,20 @@ import pandas as pd
 import streamlit as st
 class RoadAccidentDashboard:
    def __init__(self,file_path)
-       self.file_path= file_path
-       self.data= none
+       self.file_path = file_path
+       self.data = none
    def load_data(self):
       try:
-           self.data=
+           self.data =
 pd.read_csv(self.file_path)
-             return true
+            return true
           except file not found error:
-              st.error("csv file notn found file path check kren.")
+              st.error("csv file nahi mili file name check kren.")
               return false
+          except pd.errors.emptydata error:
+              st.error("csv file khaali hai.")
+              return false
+ 
     def show_tittle(self):
         st.title("road accident data visualisation")
         st.write("road accident data basic analysis")
