@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 class RoadAccidentDashboard:
-   def __init__(self,file_path)
+   def __init__(self,file_path):
        self.file_path = file_path
        self.data = none
    def load_data(self):
