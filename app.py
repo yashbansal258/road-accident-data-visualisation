@@ -5,7 +5,7 @@ class RoadAccidentDashboard:
        self.file_path = file_path
        self.data = none
    def load_data(self):
-      try:
+       try:
            self.data =
 pd.read_csv(self.file_path)
             return true
