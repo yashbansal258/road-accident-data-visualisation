@@ -1,0 +1,30 @@
+class RoadAccident:
+    def __init__(self):
+        self.states = ["Rajasthan", "Uttar Pradesh", "Madhya Pradesh",
+        "Maharashtra", "Gujarat", "Karnataka", "Tamil Nadu",
+        "Bihar", "Haryana", "Punjab"]
+
+        self.accidents = [22100, 36500, 25500, 28900, 18100,
+        22400, 17200, 13300, 13600, 7900]
+
+    def show_data(self):
+        for i in range(len(self.states)):
+            print(self.states[i], ":", self.accidents[i])
+
+    def search(self):
+        name = input("Enter state name: ").lower()
+        for i in range(len(self.states)):
+            if self.states[i].lower() == name:
+                print("2024 Accidents:", self.accidents[i])
+                return
+        print("State not found!")
+
+app = RoadAccident()
+choice = input("1. Show Data  2. Search State: ")
+
+if choice == "1":
+    app.show_data()
+elif choice == "2":
+    app.search()
+else:
+    print("Invalid choice!")
